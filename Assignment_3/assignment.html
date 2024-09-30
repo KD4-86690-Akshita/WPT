@@ -1,0 +1,85 @@
+<html>
+
+<head>
+  <title>Registeration form</title>
+</head>
+<style>
+  .container {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    /* border:3px;
+    border-style:solid; */
+    border-color: black;
+    gap: 100px;
+  }
+
+  .image {
+    width: 350px;
+    height: 300px;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+
+  .div {
+    margin-top: 10%;
+  }
+  input
+  {
+    padding:3px;
+  }
+</style>
+
+<body>
+  <div style="width:100vw;display: flex;flex-direction: column;">
+    <div>
+      <center><h1><u>Registeration Form</u></h1></center>
+    </div>
+    <div class="container">
+      <div>
+        <video class="image" controls>
+          <source src="water.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="div">
+        Name :<input type="text" id="name" value="Enter the name"><br><br>
+        BirthDate :<input type="date" id="date" value=""><br><br>
+        Email :<input type="email" id="mail" value="abc@gmail.com"><br><br>
+        Password :<input type="password" id="pass" value="********"><br><br>
+        Address : <select>
+          <option>State</option>
+          <option>Maharashtra</option>
+          <option>MP</option>
+          <option>UP</option>
+        </select>
+        <select>
+          <option>District</option>
+          <option>pune</option>
+          <option>MP</option>
+          <option>UP</option>
+        </select>
+        <select>
+          <option>City</option>
+          <option>pune</option>
+          <option>karad</option>
+          <option>nanded</option>
+        </select><br><br>
+        Gender :<input type="radio" name="Gender" value="">Female
+        <input type="radio" name="Gender" value="">Male<br><br>
+        Upload Photo :<input type="file" name="myfile" value=""><br><br>
+        Select you course : <select>
+          <option>Select course</option>
+          <option>PG-DAC</option>
+          <option>DBDA</option>
+          <option>Ditiis</option>
+        </select><br><br>
+        <input type="button" value="Register">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="Clear">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
