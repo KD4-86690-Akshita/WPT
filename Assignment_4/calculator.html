@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>calculator</title>
+</head>
+<style>
+    .table
+    {
+      width:30%;
+      height:25%;
+      margin-left:40%;
+    }
+    div{
+        margin-left:33%;
+    }
+    .button
+    {
+        margin-left:5%;
+        background-color:rgb(249, 181, 236);  
+        
+    }
+    input{
+        padding: 6px;
+        border-radius:5px;
+    }
+</style>
+<body>
+    <center><h1><u>Calculator</u></h1></center>
+    <table class="table">
+        <tr>
+            <td><h3>Enter Number 1</h3></td>
+            <td><input type="text" id="num1" value=""></td>
+        </tr>
+
+        <tr>
+            <td><h3>Enter Number 2</h3></td>
+            <td><input type="text" id="num2" value=""></td>
+        </tr>
+
+        <tr>
+            <td><h3>Result</h3></td>
+            <td><input type="text" id="result" value=""></td>
+        </tr>
+
+    </table><br><br>
+    <div>
+        <input type="Button" id="add" value="Addition" class="button" onclick="Addition()">
+        <input type="Button" id="Sub" value="Subtraction"class="button" onclick="Subtraction()">
+        <input type="Button" id="mult" value="Multiplication"class="button" onclick="Multiplication()">
+        <input type="Button" id="div" value="Division"class="button"o onclick="Division()">
+    </div>
+
+    <script>
+        var a=document.getElementById("num1");
+        var b=document.getElementById("num2");
+
+        //  var a=parseInt(document.getElementById("num1").value);
+        // var b=parseInt(document.getElementById("num2").value);
+        var result=document.getElementById("result");
+        function Addition()
+        {
+          var res=result;
+          var num1=parseInt(a.value);
+          var num2=parseInt(b.value);
+          res.value= num1+num2;   
+        }
+        function Subtraction()
+        {
+          var res=result;
+          var num1=parseInt(a.value);
+          var num2=parseInt(b.value);
+          res.value= num1-num2;   
+        }
+        function Multiplication()
+        {
+          var res=result;
+          var num1=parseInt(a.value);
+          var num2=parseInt(b.value);
+          res.value= num1*num2;   
+        }
+        function Division()
+        {
+          var res=result;
+          var num1=parseInt(a.value);
+          var num2=parseInt(b.value);
+          res.value= num1/num2;   
+        }
+
+    </script>
+</body>
+</html>
