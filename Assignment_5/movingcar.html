@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Moving Car</title>
+    <link rel="stylesheet" href="car.css" />
+  </head>
+  <body>
+    <div id="carimgdiv">
+      <h3>car Dropped!!</h3>
+    </div>
+    <div>
+      <img src="road.png" class="road" />
+    </div>
+    <div class="container">
+      <img id="carimg" src="car.jfif" />
+
+      <br />
+
+      <div id="completed">Car Dropped!!!</div>
+      <div class="calculation">
+        <button onclick="start()">start</button>
+        <button onclick="stop()">stop</button>
+        <button onclick="reset()">Reset</button>
+        <br /><br />
+        <div class="axis">
+          <div>x-axis:</div>
+          <div id="xvalue"></div>
+        </div>
+        <div class="axis" style="margin-top: 10px">
+          <div>y-axis:</div>
+          <div id="yvalue"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var car = document.getElementById("carimg");
+      var carimgdiv = document.getElementById("carimgdiv");
+      var dropped = document.getElementById("completed");
+      var marginleft = 0;
+      var margintop = 0;
+
+      var xvalue = document.getElementById("xvalue");
+      var yvalue = document.getElementById("yvalue");
+
+      var intervalId = null;
+      var isStopped = false;
+
+      function start() {
+        if (intervalId !== null) return;
+
+        intervalId = setInterval(() => {
+          xvalue.innerHTML = marginleft;
+          yvalue.innerHTML = margintop;
+
+          if (marginleft < 60 && margintop == 0) {
+            marginleft = marginleft + 1;
+            car.style.marginLeft = marginleft + "vw";
+          }
+          if (marginleft >= 60 && marginleft < 70) {
+            margintop = margintop + 1;
+            marginleft = marginleft + 1;
+            car.style.marginLeft = marginleft + "vw";
+            car.style.marginTop = margintop + "vh";
+          }
+          if (margintop < 60 && marginleft == 70) {
+            margintop = margintop + 1;
+            car.style.marginTop = margintop + "vh";
+          } else if (margintop == 60 && marginleft == 70) {
+            carimgdiv.style.display = "block";
+          }
+        }, 100);
+      }
+
+      function stop() {
+        if (intervalId !== null) {
+          clearInterval(intervalId);
+          intervalId = null;
+          isStopped = true;
+          console.log("Stopped at position: ", marginleft, margintop);
+        }
+      }
+      function reset() {
+        window.location.href = "movingcar.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+body {
+  margin: 0px;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.axis {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#xvalue {
+  border: 1.5px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 3px;
+}
+#yvalue {
+  border: 1.5px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 3px;
+}
+#completed {
+  display: none;
+  position: fixed;
+  top: 60%;
+  left: 0%;
+}
+.calculation {
+  position: fixed;
+  top: 40%;
+  left: 10%;
+}
+#carimgdiv {
+  width: 300px;
+  height: 200px;
+  background: rgba(216, 213, 199, 0.823);
+  position: fixed;
+  left: 70%;
+  top: 57%;
+  display: none;
+}
+.road {
+  position: fixed;
+  top: 16%;
+  left: 3%;
+  width: 62vw;
+  height: 5vh;
+}
